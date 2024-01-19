@@ -2,11 +2,13 @@ import pandas as pd
 import numpy as np
 from statsmodels.tsa.stattools import adfuller
 import matplotlib.pyplot as plt
-data = pd.read_csv('/Users/Leo/Downloads/combined.csv')
+data = pd.read_csv(r'C:\Users\ziqia\PycharmProjects\Time series analysis\AAPL_revised.csv',
+                   header=0,
+                   names=['Close price', 'Inner'])
 df = data['Close price']
 plt.figure(figsize=(10, 6))
 plt.plot(df, label='Closing Prices')
-plt.title('Intel Corporation Stock Prices')
+plt.title('AAPL Stock Prices')
 plt.xlabel('Time')
 plt.ylabel('Price')
 plt.legend()
